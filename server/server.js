@@ -7,11 +7,14 @@ const WishlistRoutes = require("./Routes/WishlistaddRoute");
 
 dotenv.config();
 
+
 // Connect to the database
 connectDB();
 
 const app = express();
+var cors = require("cors");
 
+app.use(cors());
 // Middleware
 app.use(express.json());
 
