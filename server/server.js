@@ -21,7 +21,9 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/wishlist",WishlistRoutes)
-
+app.get("/messages", (req, res) => { 
+    res.send("Hello"); 
+}); 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
